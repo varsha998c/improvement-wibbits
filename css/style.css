@@ -130,6 +130,73 @@ br.clear {
 #spotlight  header div.right {
 	width: 45%;
 	height: 40px;
+	flex-wrap: wrap;
+}
+.open-btn { 
+	font-size: 30px;
+    color: #fff;
+	margin-right: 30px;
+	cursor: pointer;
+	display: none;
+}
+.open-btn .fa-times{
+	color: #000;
+}
+.open .fas { 
+
+}
+.slider-container { 
+	background: #0fe9f1;
+    padding: 40px;
+    position: fixed;
+    top: 0px;
+	left: 640px;
+    width: 100%;
+    height: 100vh;
+	display: none;
+}
+.active{
+	transform: translateX(-640px);
+}
+.slider-container .slider { 
+	text-align: center;
+}
+.slider-container .slider li { 
+	font-size: 20px;
+    margin-bottom: 28px;
+	transition: all .3 ease-in-out;
+	font-weight: bold;
+}
+.slider-container .slider li a:hover{
+	color: #0413e9;
+	cursor: pointer;
+}
+.slider-container .slider li a { 
+	width: 166px;
+	background-color: #f7efeef6;
+	border-radius: 10%;
+	border: #31adff;
+	filter: alpha(opacity = 95);
+	opacity: 0.75;
+}
+.slider-container .slider .down { 
+
+}
+
+.slider-container .slider .down a { 
+
+}
+.slider-container .slider .down a .fas { 
+
+}
+.slider-container .slider .down .dropdown { 
+
+}
+.slider-container .slider .down .dropdown a { 
+
+}
+#spotlight  header{
+	position: relative;
 }
 #spotlight  header div.right ul {
 	display: flex;
@@ -283,10 +350,10 @@ br.clear {
 	box-shadow: 1px 1px 1px 1px #f8f1f1bb, 0 0 10px 0 #ebcccc9d;
 }
 #trust ul li {
-	padding: 15px;
+	margin: 13px;
 }
 #trust ul li img {
-	width: 200px;
+	/* width: 200px; */
 }
 #services {
 	width: 100%;
@@ -360,7 +427,7 @@ br.clear {
 }
 #about .wrapper div.about-left {
 	width: 50%;
-    height: 500px;
+    /* height: 500px; */
 }
 #about .wrapper div.about-left h3 {
 	font-size: 45px;
@@ -749,7 +816,7 @@ hr {
 }
 #fill section.wrapper div.right form input[type=checkbox] {
 	color: #6d6d6d;
-	margin-bottom: 30px;
+	margin-bottom: 1px;
 } 
 #fill section.wrapper div.right form .condition {
 	color: #6d6d6d;
@@ -977,6 +1044,9 @@ footer h4 {
 	#spotlight header div.right {
 		width: 50%;
 	}
+	.hamburger {
+		display: none;
+	}
 	#search .wrapper div.search-left {
 		width: 50%;
 	}
@@ -1008,7 +1078,7 @@ footer h4 {
 	}
 	#multiple .wrapper div.option div.one ul li {
 		font-size: 14px;
-		margin: -2px 2px 5px 3px;
+		margin: 0px 2px 5px 3px;
 	}
 	#multiple .wrapper div.option div.two h3 {
 		text-align: center;
@@ -1118,6 +1188,9 @@ footer h4 {
 	#spotlight  header div.right ul li a .fa-twitter {
 		display: none;
 	}
+	.hamburger {
+		display: none;
+	}
 	#services .wrapper div.header h1 {
 		color: rgba(5, 1, 1, 0.822);
 		font-size: 43px;
@@ -1185,7 +1258,7 @@ footer h4 {
 		margin: 0;
 	}
 	#multiple .wrapper div.option div.one a.submit {
-		left: 27%;
+		left: 32%;
 	}
 	#multiple .wrapper div.option div.two p {
 		font-size: 13px;
@@ -1198,7 +1271,7 @@ footer h4 {
 		margin: 0;
 	}
 	#multiple .wrapper div.option div.two a.submit {
-		left: 27%;
+		left: 32%;
 	}
 	#multiple .wrapper div.option div.three p {
 		font-size: 13px;
@@ -1210,7 +1283,7 @@ footer h4 {
 		margin: 0;
 	}
 	#multiple .wrapper div.option div.three a.submit {
-		left: 27%;
+		left: 32%;
 	}
 	#fill section.wrapper div.left h2 {
 		font-size: 32px;
@@ -1258,6 +1331,9 @@ footer h4 {
 	#spotlight section.wrapper div.landing-left h1 {
 		font-size: 33px;
 	}
+	.hamburger {
+		display: none;
+	}
 	#services .wrapper ul li h3 {
 		padding-bottom: 0;
 	}
@@ -1265,7 +1341,7 @@ footer h4 {
 		font-size: 14px;
 	}
 	#about .wrapper div.about-left h3 {
-		font-size: 24px;
+		font-size: 19px;
 	}
 	#about .wrapper div.about-left p {
 		width: 100%;
@@ -1445,12 +1521,9 @@ footer h4 {
 		font-size: 21px;
 	}
 }
-
-
-
 @media all and (max-width: 768px) {
 	#spotlight header div.left img {
-		width: 50%;
+		width: 31%;
 	}
 	#spotlight header div.right {
 		width: 56%;
@@ -1461,14 +1534,17 @@ footer h4 {
 	#spotlight section.wrapper div.landing-left a.submit {
 		padding: 4% 6%;
 	}
+	.hamburger {
+		display: none;
+	}
 	#trust h3 {
 		font-size: 20px;
 	}
 	#trust ul {
-		width: 87%;
+		width: 94%;
 	}
 	#trust ul li {
-		padding: 5px;
+		margin: 0 auto;
 	}
 	#services .wrapper div.header h1 {
 		font-size: 27px;
@@ -1481,6 +1557,8 @@ footer h4 {
 	}
 	#services .wrapper ul li {
 		width: 89%;
+		margin-left: 7%;
+    	margin-bottom: 5%;
 	}
 	#about .wrapper div.about-left a.submit {
 		padding: 5% 3%;
@@ -1497,7 +1575,7 @@ footer h4 {
 	}
 	#multiple .wrapper div.option div.one h3 {
 		width: 100%;
-    /* margin-left: -22%; */
+     /* margin-left: -22%; */
     	align-items: center;
     	justify-content: center;
     	display: flex;
@@ -1522,16 +1600,20 @@ footer h4 {
 		
 	}
 	#multiple .wrapper div.option div.one a.submit {
-		padding: 5% 12%;
+		padding: 3% 12%;
 		top: 93%;
 		left: 30%;
+	}
+	hr {
+		margin-top: 2rem;
+		border: .6px solid hsl(0, 1%, 24%);
 	}
 	#multiple .wrapper div.option div.two {
 		position: relative;
 	}
 	#multiple .wrapper div.option div.two h3 {
 		width: 100%;
-    /* margin-left: -22%; */
+     /* margin-left: -22%; */
     	align-items: center;
     	justify-content: center;
     	display: flex;
@@ -1554,14 +1636,13 @@ footer h4 {
 	}
 	#multiple .wrapper div.option div.two a.submit {
 		left: 31%;
-		padding: 5% 12%;
+		padding: 3% 12%;
 	}
 	#multiple .wrapper div.option div.three {
 		position: relative;
 	}
 	#multiple .wrapper div.option div.three h3 {
 		width: 100%;
-    /* margin-left: -22%; */
     	align-items: center;
     	justify-content: center;
     	display: flex;
@@ -1580,15 +1661,25 @@ footer h4 {
 	#multiple .wrapper div.option div.three a {
 		position: absolute;
 		top: 93%;
-		left: 2%;
+		left: 1%;
 	}
 	#multiple .wrapper div.option div.three a.submit {
-		padding: 5% 12%;
+		padding: 3% 12%;
     	left: 31%;
+	}
+	hr {
+		margin-top: 1rem;
+		border: .5px solid hsl(0, 1%, 24%);
+	}
+	#fill section.wrapper div.left {
+		margin-left: 16%;
 	}
 	#fill section.wrapper div.left h2 {
 		width: 100%;
-		font-size: 20px;
+		font-size: 25px;
+	}
+	#fill section.wrapper div.left p {
+		width: 91%;
 	}
 	#fill section.wrapper div.right form a.button {
 		padding: 3% 4%;
@@ -1609,121 +1700,379 @@ footer h4 {
 	}
 	#team section.wrapper ul li h4 {
 		font-size: 14px;
+		text-align: center;
 	}
 	#team section.wrapper ul li h6 {
 		padding-left: 16%;
 	}
 	#team section.wrapper ul li div.icon {
-		padding-left: 25%;
+		margin-left: 28%;
 	}
 }
-@media all and (max-width: 540px) {
+@media all and (max-width: 640px) {
 	#spotlight header div.left img {
-		width: 85px;
+		width: 43%;
 	}
 	#spotlight header div.right {
 		display: none;
-	}
-	#spotlight section.wrapper div.landing-left {
-		width: 700px;
-	}
-	#spotlight section.wrapper div.landing-left h1 {
-		font-size: 15px;
-	}
-	#spotlight section.wrapper div.landing-left p {
-		width: 190px;
-	}
-	#spotlight section.wrapper div.landing-left a.submit {
-		padding: 6% 16%;
-	}
-	#spotlight section.wrapper div.landing-right img {
-		display: none;
-	}
-	#trust h3 {
-		width: 320px;
-		padding-left: 34%;
-	}
-	#trust ul {
-		width: 230px;
-		padding-bottom: 40px;
-	}
-	#trust ul li {
-		padding: 12px 21px;
-	}
-	#services .wrapper div.header {
-		width: 400px;
-	}
-	#services .wrapper div.header p {
-		width: 300px;
-	}
-	#about .wrapper div.about-left a {
-		width: 40%;
-	}
-	#about .wrapper div.about-left a.submit {
-		padding: 4% 5%;
-		font-size: 10px;
-	}
-	#search .wrapper div.search-right a.submit {
-		padding: 4% 2%;
-    	font-size: 11px;
-	}
-	#multiple .wrapper div.option div.one {
-		width: 242px;
-	}
-	#multiple .wrapper div.option div.two {
-		width: 242px;
-	}
-	#multiple .wrapper div.option div.three {
-		width: 242px;
-	}
-	#middle section.wrapper div.one img {
-		margin: -4% -5%;
-		width: 48px;
-	}
-	#middle section.wrapper p {
-		width: 55%;
-		font-size: 11px;
-	}
-	#middle section.wrapper p b {
-		font-size: 11px;
-	}
-	#team section.wrapper ul li div.icon {
-		padding-left: 17%;
-	}
-	#social section.wrapper div.media ul {
-		width: 80%;
-	}
-	#social section.wrapper div.media ul li {
-		width: 4%;
-	}
-}
-@media all and (max-width: 480px) {
-	#trust ul {
 		width: 100%;
+		flex-direction: column;
+
 	}
-	#trust ul li {
-		padding: 4px 10px;
+	.slider-container{
+		display: block;
 	}
-	#trust ul li img {
-		width: 4%;
+	.open-btn{
+		display: block;
 	}
 	#services .wrapper ul li {
-		width: 220px;
+		margin-left: 7%;
+		margin-bottom: 4%;
+	}
+	#about .wrapper div.about-left {
+		width: 60%;
+		margin-left: 12%;
+	}
+	#about .wrapper div.about-left h3 {
+		font-size: 23px;
+	}
+	#about .wrapper div.about-left p {
+		font-size: 15px;
 	}
 	#about .wrapper div.about-right {
 		display: none;
 	}
-	#search .wrapper div.search-left img {
+	#search .wrapper div.search-left {
 		display: none;
 	}
 	#search .wrapper div.search-right {
-		width: 360px;
+		margin-left: 12%;
+		width: 100%;
 	}
-	#search .wrapper div.search-right a {
-		margin: 2% 2%;
+	#search .wrapper div.search-right h3 {
+		font-size: 27px;
 	}
-	#search .wrapper div.search-right a.submit {
-
+	/* hr {
+		border: .5px solid hsl(0, 1%, 24%);
+	} */
+	#search .wrapper div.search-right ul li {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.one ul {
+		width: 61%;
+	}
+	#multiple .wrapper div.option div.one ul li {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.one a.submit {
+		padding: 3% 11%;
+		top: 95%;
+		left: 29%;
+	}
+	#multiple .wrapper div.option div.two ul {
+		width: 61%;
+	}
+	#multiple .wrapper div.option div.two ul li {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.two a.submit {
+		padding: 3% 11%;
+		top: 95%;
+		left: 29%;
+	}
+	#multiple .wrapper div.option div.three ul {
+		width: 61%;
+	}
+	#multiple .wrapper div.option div.three ul li {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.three a.submit {
+		padding: 3% 11%;
+		top: 95%;
+		left: 29%;
+	}
+	#middle section.wrapper div.one {
+		left: 37%;
+		top: 12%;
+	}
+	#team section.wrapper ul li div.icon {
+		margin-left: 22%;
+	}
+}
+@media all and (max-width: 540px) {
+	#spotlight header div.left img {
+		width: 35%;
+	}
+	#spotlight header div.right ul li {
+		display: none;
 	}
 	
+	#spotlight section.wrapper div.landing-left {
+		width: 79%;
+	}
+	#spotlight section.wrapper div.landing-left h1 {
+		color: blue;
+	}
+	#spotlight section.wrapper div.landing-right {
+		display: none;
+	}
+	#trust ul li img {
+		width: 75%;
+	}
+	#middle section.wrapper h2 {
+		font-size: 27px;
+	}
+	#team section.wrapper h2 {
+		font-size: 26px;
+	}
+	#middle section.wrapper div.one {
+		width: 15%;
+		height: 23%;
+		top: 33%;
+		left: 43%;
+	}
+	#middle section.wrapper div.one img {
+		width: 62px;
+		padding-top: 11px;
+		padding-left: 20px;
+		padding-right: 24px;
+	}
+	#team section.wrapper ul li h6 {
+		padding-left: 6%;
+	}
+	#team section.wrapper ul li div.icon {
+		margin-left: 17%;
+	}
+	#fill section.wrapper div.right {
+		margin-left: 17%;
+	}
+	#fill section.wrapper div.right form input[type=text], select {
+		width: 100%;
+	}
+	#fill section.wrapper div.right form input[type=email] {
+		width: 100%;
+	}
+	#fill section.wrapper div.right form input[type=number] {
+		width: 100%;
+	}
+	#social section.wrapper {
+		width: 53%;
+	}
+	#social section.wrapper div.evolo h3 {
+		font-size: 19px;
+	}
+	#social section.wrapper div.evolo p {
+		padding: auto;
+	}
+	#social section.wrapper div.links {
+		width: 100%; 
+	}
+	#social section.wrapper div.links h3 {
+		font-size: 18px;
+	}
+	#social section.wrapper div.media h3 {
+		font-size: 18px;
+	}
 }
+@media all and (max-width: 480px) {
+	#about .wrapper div.about-left {
+		margin-left: 18%;
+	}
+	#about .wrapper div.about-left h3 {
+		font-size: 17px;
+	}
+	#search .wrapper div.search-right {
+		margin-left: 16%;
+	}
+	#search .wrapper div.search-right h3 {
+		font-size: 20px;
+	}
+	#multiple .wrapper div.header h1 {
+		font-size: 21px;
+	}
+	#multiple .wrapper div.header p {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.one p {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.one ul {
+		width: 99%;
+	}
+	#multiple .wrapper div.option div.one a.submit {
+		left: 26%;
+	}
+	#multiple .wrapper div.option div.one a.submit {
+		padding: 4% 11%;
+	}
+	#multiple .wrapper div.option div.two p {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.two ul {
+		width: 99%;
+	}
+	#multiple .wrapper div.option div.two a.submit {
+		left: 26%;
+	}
+	#multiple .wrapper div.option div.two a.submit {
+		padding: 4% 11%;
+	}
+
+	#multiple .wrapper div.option div.three p {
+		font-size: 13px;
+	}
+	#multiple .wrapper div.option div.three ul {
+		width: 99%;
+	}
+	#multiple .wrapper div.option div.three a.submit {
+		left: 26%;
+	}
+	#multiple .wrapper div.option div.three a.submit {
+		padding: 4% 11%;
+	}
+	#fill section.wrapper div.left {
+		margin-left: 12%;
+	}
+	#fill section.wrapper div.left h2 {
+		font-size: 19px;
+	}
+	#fill section.wrapper div.left p {
+		width: 100%;
+		font-size: 14px;
+	}
+	#fill section.wrapper div.right {
+		width: 81%;
+		margin-left: 12%;
+	}
+	#middle section.wrapper h2 {
+		font-size: 20px;
+	}
+	#middle section.wrapper p {
+		width: 72%;
+		margin: 1% 14%;
+		font-size: 13px;
+	}
+	#middle section.wrapper p b {
+		font-size: 13px;
+	}
+	#middle section.wrapper div.one img {
+		width: 54px;
+		padding-top: 10px;
+		padding-left: 16px;
+		padding-right: 27px;
+	}
+	#team section.wrapper h2 {
+		font-size: 22px;
+	}
+	#team section.wrapper p {
+		width: 76%;
+		margin: 1% 12%;
+	}
+	#team section.wrapper ul li h4 {
+		font-size: 13px;
+	}
+	#team section.wrapper ul li div.icon {
+		margin-left: 9%;
+	}
+	#social section.wrapper div.evolo h3 {
+		font-size: 17px;
+	}
+	#social section.wrapper div.evolo p {
+		padding: 0 0px 0 0;
+		font-size: 13px;
+	}
+	#social section.wrapper div.links h3 {
+		font-size: 17px;
+	}
+	#social section.wrapper div.links ul li {
+		font-size: 13px;
+	}
+	#social section.wrapper div.media h3 {
+		font-size: 16px;
+	}
+	#social section.wrapper div.media ul li {
+		margin: 5px 2px 5px 2px;
+	}
+	footer {
+		display: none;
+	}
+}
+@media all and (max-width: 360px) {
+	#services .wrapper div.header h1 {
+		font-size: 19px;
+	}
+	#services .wrapper div.header p {
+		margin: 0px 1%;
+	}
+	#about .wrapper div.about-left {
+		margin-left: 8%;   
+	 	width: 100%;
+	}
+	#about .wrapper div.about-left h3 {
+		font-size: 16px;
+	}
+	#search .wrapper div.search-right {
+		margin-left: 7%;
+	}
+	#multiple .wrapper div.header {
+		width: 88%;
+		margin-left: 1%;
+	}
+	#multiple .wrapper div.option div.one h3 {
+		font-size: 22px;
+	}
+	#multiple .wrapper div.option div.one a.submit {
+		padding: 6% 9%;
+	}
+	#multiple .wrapper div.option div.two h3 {
+		font-size: 22px;
+	}
+	#multiple .wrapper div.option div.two a.submit {
+		padding: 6% 10%;
+	}
+	#multiple .wrapper div.option div.three h3 {
+		font-size: 22px;
+	}
+	#multiple .wrapper div.option div.three a.submit {
+		padding: 6% 10%;
+	}
+	#fill section.wrapper div.left {
+		margin: 0 auto;
+	}
+	#fill section.wrapper div.left h2 {
+		font-size: 17px;
+	}
+	#fill section.wrapper div.left ul li {
+		font-size: 13px;
+	}
+	#fill section.wrapper div.left p {
+		width: 100%;
+		font-size: 13px;
+		margin-bottom: 10px;
+	}
+	#fill section.wrapper div.right form input[type=text], select {
+		width: 94%;
+	}
+	#fill section.wrapper div.right form input[type=email] {
+		width: 94%;
+	}
+	#fill section.wrapper div.right form input[type=number] {
+		width: 94%;
+	}
+	#middle section.wrapper div.one img {
+		width: 51px;
+		padding-top: 8px;
+		padding-left: 14px;
+	}
+	#team section.wrapper ul li {
+		width: 41%;
+		margin-left: 29%;
+	}
+	#team section.wrapper ul li h6 {
+		font-size: 13px;
+	}
+	#social section.wrapper {
+		width: 77%;
+	}
+}
+
